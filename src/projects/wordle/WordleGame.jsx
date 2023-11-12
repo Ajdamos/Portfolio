@@ -106,7 +106,7 @@ export const WordleGame = (props) => {
 
     return (
     <div className="flex flex-col items-center h-screen w-screen bg-[#465569]">
-        <h3 className="text-[#E1E1E1] m-1">WORDLEEE ! - {word}</h3>
+        <h3 className="text-[#E1E1E1] m-1">WORDLEEE !</h3>
         
         <div className="w-[450px] h-[450px] grid grid-cols-5 gap-2 justify-center">
         {
