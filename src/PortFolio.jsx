@@ -1,6 +1,6 @@
 import { useRef } from "react"
 import { AutoWritingText } from "./components/AutoWrite"
-import { AiFillGithub } from 'react-icons/ai'
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 import { Project } from "./components/Projekt"
 import { LeftArrow, RightArrow } from "./components/Arrows"
 import { NewPageButton, ScrollButton } from "./components/Buttons"
@@ -10,37 +10,29 @@ import { AboutMe } from "./components/AboutMe"
 export const PortFolio = () => {
 
     const projectsRef = useRef()
-    const contactRef = useRef()
     const scrollToProjects = () => {
         projectsRef.current?.scrollIntoView({behavior: 'smooth'});
     }
-    const scrollToContact = () => {
-        contactRef.current?.scrollIntoView({behavior: "smooth"});
-    }
+
 
     return (
         <>
-        <div className="flex flex-col items-center justify-center w-full h-screen p-32  text-lightPink">
+        <div className="flex flex-col items-center justify-center w-full h-screen p-32  text-lightPink ">
         <MovingBackground />
-            <h1>Hi, I'm Adam</h1>
-            <AutoWritingText />
+            <h1 className="text-center">Hi, I'm Adam</h1>
+            <div className="hidden md:block"><AutoWritingText /></div>
 
-            <div className="flex">
-            <ScrollButton icon={null} text="Contact" onClick={scrollToContact} />
+            <div className="flex flex-col md:flex-row">
             <ScrollButton icon={null} text="Projects" onClick={scrollToProjects} />
+            <NewPageButton icon={<AiFillLinkedin/>} text="LinkedIn" address="https://www.linkedin.com/in/adam%C4%8Derno%C5%A1/" />
             <NewPageButton icon={<AiFillGithub/>} text="Github" address="https://github.com/Ajdamos" />
             </div>
             
         </div>
 
-        <div ref={contactRef} className=" w-full h-screen flex flex-wrap justify-center items-center  text-myBlack">
-            <AboutMe />
-            <ContactForm />
-        </div>
-
         <div className="flex flex-col items-center w-full h-screen text-lightPink" ref={projectsRef}>
             <h1 className="mt-8">Projects</h1>
-            <div className="flex items-center">
+            <div className="flex flex-col overflow-auto items-center lg:overflow-hidden lg:flex-row">
             {/* <LeftArrow /> */}
 
             <Project key={1} description="Small game based of the game wordle online" name="Wordle" githubrepo="/Wordle" address="wordle" technologies={["react", "javascript", "tailwind"]}/>
@@ -49,7 +41,6 @@ export const PortFolio = () => {
 
             {/* <RightArrow /> */}
             </div>
-            <p className="text-lightPink/[0.4]">{"Hire me :)"}</p>
         </div>
         </>
     )

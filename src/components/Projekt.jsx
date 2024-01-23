@@ -19,7 +19,7 @@ export const Project = (props) => {
     }, [])
 
     return (
-        <div className="w-[350px] h-[500px] m-4 border-2 rounded-lg border-lightPink">
+        <div className="w-[350px] min-h-[500px] h-[500px] m-4 border-2 rounded-lg border-lightPink">
             <div className="h-[45%] bg-lightPink text-myBlack">
                 <h4 className="m-0 p-4  flex-col flex items-center">{props?.name}</h4>
             </div>
@@ -28,12 +28,11 @@ export const Project = (props) => {
             </div>
             <div className="h-[40%] flex flex-col text-center justify-between">
                 <p>{props?.description}</p>
-                <div className="flex bot">
+                <div className="flex justify-center bot">
                     {   props.toNewPage ?
                     <NewPageButton text="play" address={props.address}/> :
                     <NavigateButton text="play" address={props.address}/> 
                     }
-                <NewPageButton icon={<AiFillGithub/>} text="Github" address={"https://github.com/Ajdamos" + (props.githubrepo ? props.githubrepo : "")} />
                 </div>
             </div>
         </div>
