@@ -32,11 +32,11 @@ export const PortFolio = () => {
             <div className="w-[90%] md:w-[65%]">
             {/* <LeftArrow /> */}
 
-            <ProjectLine title="Graph and maze pathfinding" description="2 path finding algorithms Breadth-first search and A* for path finding" link="https://github.com/Ajdamos/graphs" githubLink="https://github.com/Ajdamos/graphs"/>             
-            <ProjectLine title="Currency exchange rates" description="Real time rates for currency in 6 different banks, all updated up to this date using kurzy.cz api" link="https://menove-kurzy-adam-cernos.vercel.app/" githubLink="https://github.com/Ajdamos/Menove-Kurzy-Adam-Cernos"/>             
-            <ProjectLine title="Calendar" description="Project made for responsibility design" link="https://calendar-puce-one.vercel.app/" githubLink="https://github.com/Ajdamos/ObjednejZadani"/>             
-            <ProjectLine title="Space evader" description="Game where you dodge meteors by moving your mouse" link="spaceevader"/>             
-            <ProjectLine title="Wordle" description="Wordle clone" link="wordle"/>             
+            <ProjectLine local={false}  title="Graph and maze pathfinding" description="2 path finding algorithms Breadth-first search and A* for path finding" link="https://graphs-beta-six.vercel.app/" githubLink="https://github.com/Ajdamos/graphs"/>             
+            <ProjectLine local={false} title="Currency exchange rates" description="Real time rates for currency in 6 different banks, all updated up to this date using kurzy.cz api" link="https://menove-kurzy-adam-cernos.vercel.app/" githubLink="https://github.com/Ajdamos/Menove-Kurzy-Adam-Cernos"/>             
+            <ProjectLine local={false} title="Calendar" description="Project made for responsibility design" link="https://calendar-puce-one.vercel.app/" githubLink="https://github.com/Ajdamos/ObjednejZadani"/>             
+            <ProjectLine local={true} title="Space evader" description="Game where you dodge meteors by moving your mouse" link="spaceevader"/>             
+            <ProjectLine local={true} title="Wordle" description="Wordle clone" link="wordle"/>             
 
             {/* <RightArrow /> */}
             </div>
