@@ -7,6 +7,7 @@ import { NewPageButton, ScrollButton } from "./components/Buttons"
 import { MovingBackground } from "./components/MovingBackground"
 import { ContactForm } from "./components/ContactForm"
 import { AboutMe } from "./components/AboutMe"
+import { ProjectLine } from "./components/ProjectLine"
 export const PortFolio = () => {
 
     const projectsRef = useRef()
@@ -32,12 +33,14 @@ export const PortFolio = () => {
 
         <div className="flex flex-col items-center w-full h-screen text-lightPink" ref={projectsRef}>
             <h1 className="mt-8">Projects</h1>
-            <div className="flex flex-col overflow-auto items-center lg:overflow-hidden lg:flex-row">
+            <div className="w-[90%] md:w-[65%]">
             {/* <LeftArrow /> */}
 
-            <Project key={1} description="Small game based of the game wordle online" name="Wordle" githubrepo="/Wordle" address="wordle" technologies={["react", "javascript", "tailwind"]}/>
-            <Project key={2} description="Small game about generating obstacles, move your mouse out of the boxes" githubrepo="/SpaceEvader" name="Space Evader" address="spaceevader" technologies={["react", "typescript", "tailwind"]}/>
-            <Project key={3} description="This was small project about calendar layout" toNewPage={true} address="https://calendar-puce-one.vercel.app/" name="Calendar" githubrepo="/ObjednejZadani" technologies={["react", "typescript", "tailwind"]}/>
+            <ProjectLine title="Graph and maze pathfinding" description="pipipupu" link="https://www.youtube.com/watch?v=RUKrXzzc9vE&ab_channel=HaiseT"/>             
+            <ProjectLine title="Currency exchange rates" description="pipipupu" link="youtube.com"/>             
+            <ProjectLine title="Space evader" description="pipipupu" link="youtube.com"/>             
+            <ProjectLine title="Wordle" description="pipipupu" link="youtube.com"/>             
+            <ProjectLine title="Calendar" description="pipipupu" link="https://calendar-puce-one.vercel.app/"/>             
 
             {/* <RightArrow /> */}
             </div>
