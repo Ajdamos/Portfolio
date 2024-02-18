@@ -42,13 +42,13 @@ export const ProjectLine = (props) => {
 
                         <button className="flex items-center justify-center border-2 border-myBlack bg-myBlack text-lightPink hover:bg-lightPink hover:text-myBlack w-[10rem] h-8 mx-6 rounded">
                             <a className="w-full h-full flex justify-center items-center" href={link} target="_blank">
-                                play
+                                Try it
                             </a>
                         </button>
                         { githubLink &&
                         <button className="flex items-center justify-center border-2 border-myBlack bg-myBlack text-lightPink hover:bg-lightPink hover:text-myBlack w-[10rem] h-8 mx-6 rounded">
-                            <a className="w-full h-full flex justify-center items-center" href={link} target="_blank">
-                                play
+                            <a className="w-full h-full flex justify-center items-center" href={githubLink} target="_blank">
+                                Github
                             </a>
                         </button>
                         }

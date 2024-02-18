@@ -1,12 +1,8 @@
 import { useRef } from "react"
 import { AutoWritingText } from "./components/AutoWrite"
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
-import { Project } from "./components/Projekt"
-import { LeftArrow, RightArrow } from "./components/Arrows"
 import { NewPageButton, ScrollButton } from "./components/Buttons"
 import { MovingBackground } from "./components/MovingBackground"
-import { ContactForm } from "./components/ContactForm"
-import { AboutMe } from "./components/AboutMe"
 import { ProjectLine } from "./components/ProjectLine"
 export const PortFolio = () => {
 
@@ -36,11 +32,11 @@ export const PortFolio = () => {
             <div className="w-[90%] md:w-[65%]">
             {/* <LeftArrow /> */}
 
-            <ProjectLine title="Graph and maze pathfinding" description="pipipupu" link="https://www.youtube.com/watch?v=RUKrXzzc9vE&ab_channel=HaiseT"/>             
-            <ProjectLine title="Currency exchange rates" description="pipipupu" link="youtube.com"/>             
-            <ProjectLine title="Space evader" description="pipipupu" link="youtube.com"/>             
-            <ProjectLine title="Wordle" description="pipipupu" link="youtube.com"/>             
-            <ProjectLine title="Calendar" description="pipipupu" link="https://calendar-puce-one.vercel.app/"/>             
+            <ProjectLine title="Graph and maze pathfinding" description="2 path finding algorithms Breadth-first search and A* for path finding" link="https://github.com/Ajdamos/graphs" githubLink="https://github.com/Ajdamos/graphs"/>             
+            <ProjectLine title="Currency exchange rates" description="Real time rates for currency in 6 different banks, all updated up to this date using kurzy.cz api" link="https://menove-kurzy-adam-cernos.vercel.app/" githubLink="https://github.com/Ajdamos/Menove-Kurzy-Adam-Cernos"/>             
+            <ProjectLine title="Calendar" description="Project made for responsibility design" link="https://calendar-puce-one.vercel.app/" githubLink="https://github.com/Ajdamos/ObjednejZadani"/>             
+            <ProjectLine title="Space evader" description="Game where you dodge meteors by moving your mouse" link="spaceevader"/>             
+            <ProjectLine title="Wordle" description="Wordle clone" link="wordle"/>             
 
             {/* <RightArrow /> */}
             </div>
